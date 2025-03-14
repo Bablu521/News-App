@@ -19,7 +19,7 @@ class CategoryItem extends StatelessWidget {
             child: Container(
               width: 80,
               height: 80,
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(

@@ -5,7 +5,7 @@ class NewsService {
   final Dio dio;
   NewsService({required this.dio});
 
-  Future<List<ArticleModel>> getNews({ required String categoryName}) async {
+  Future<List<ArticleModel>> getNews({required String categoryName}) async {
     try {
       var response = await dio.get(
           "https://newsapi.org/v2/top-headlines?category=$categoryName&apiKey=f26a09123fd54360a972f76d93800e02");
@@ -17,12 +17,13 @@ class NewsService {
           title: article["title"],
           description: article["description"],
           image: article["urlToImage"],
+          url: article["url"],
         );
         articlesList.add(articleModel);
       }
       return articlesList;
     } catch (e) {
-      return [];
+      throw Exception("there is an error .. try later");
     }
   }
 }

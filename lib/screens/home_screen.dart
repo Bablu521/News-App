@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black54,
         title: Text(
-          "News App",
+          "Top News",
           style: TextStyle(
             color: Colors.white,
             fontSize: 24,
