@@ -69,8 +69,13 @@ class _WebViewScreenState extends State<WebViewScreen> {
               },
               icon: Icon(Icons.arrow_back_ios_new)),
         ),
-        body:  isLoading ? Center(
-          child: CircularProgressIndicator(),
+        body:  isLoading ? Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: CircularProgressIndicator(),
+            ),
+          ],
         ) : WebViewWidget(controller: controller));
   }
 }
